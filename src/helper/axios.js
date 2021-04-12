@@ -7,10 +7,8 @@ const baseURL =
     : "https://dssbackend.herokuapp.com/api";
 
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:2005/api",
   withCredentials: true,
-  "Access-Control-Allow-Credentials": "true",
-  crossorigin: true,
+  baseURL: "http://localhost:2005/api",
 });
 // baseURL: "https://dssbackend.herokuapp.com/api",
 
