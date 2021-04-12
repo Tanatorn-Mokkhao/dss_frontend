@@ -22,6 +22,11 @@ function App() {
       dispatch(getAllTable());
       dispatch(getAllChart());
     }
+    // ping heroku
+    (function wakeup() {
+      setTimeout(wakeup, 1500000); //29m
+    })();
+    //
   }, [auth.authenticate]);
 
   return (
