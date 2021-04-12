@@ -1,0 +1,167 @@
+.main-drag{
+    display: grid;
+    grid-template-columns: 30vh minmax(80vh,1fr); 
+    grid-template-rows: minmax(100vh ,100vh) 1fr;
+}
+
+.main-drag .main-drag-zone1{
+    background-color: white;
+    box-shadow: 0px 5px 15px #aaaaaa; 
+}
+.main-drag-zone1 .control-scroll-listdata{
+    overflow: scroll;
+    height: 100vh;
+}
+.main-drag-zone1 .control-scroll-listdata > ul {
+    list-style: none;
+    text-align: start;  
+    margin-top: 5vh;
+}
+.main-drag-zone1 .control-scroll-listdata > ul >li {
+    padding:1vh;
+}
+
+.main-drag-zone2 {
+    display: grid;
+    grid-template-rows: 30vh 1fr;
+
+}
+.main-drag-zone2 .top-drop{
+    display: grid;
+    grid-template-rows: 11vh 19vh;
+ 
+}
+.main-drag-zone2 .top-drop .drop {
+    background-color: rgb(237, 237, 237);
+    box-shadow: 0px 2px 15px #aaaaaa; 
+ 
+    margin-left: 1vh;
+}
+
+.top-drop .drop{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(20vh,1fr));
+}
+.drop-zone1 .x {
+    display: flex;
+    padding:2vh;
+    
+}
+.drop-zone1 .x > table{
+    margin-left: 1vh;
+    width: 20vh;
+    height: 4vh;
+    background-color: white;
+    box-shadow: 0px 1px 2px #aaaaaa; 
+}
+.drop-zone1 .x > table > tr > td {
+    text-align: start;
+   
+}
+.drop-zone1 .x > table > tr > td > p {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(217, 217, 217);
+
+
+
+
+ 
+    
+}
+.drop-zone1 .y {
+    display: flex;
+    margin-left: 2vh;
+}
+
+.drop-zone1 .y .control-scroll{
+    height: 10vh;
+}
+.drop-zone1 .y  .control-scroll > table{
+    margin-left: 1vh;
+    width: 20vh;
+    height: 9vh;
+    background-color: white;
+    box-shadow: 0px 1px 2px #aaaaaa; 
+}
+.drop-zone1 .y  .control-scroll > table > tr > td {
+    text-align: start;
+    vertical-align:top;
+    
+}
+.drop-zone1 .y  .control-scroll > table > tr > td > p{
+    background-color: rgb(217, 217, 217);
+    margin: 2px;
+    padding: 0;
+}
+
+.bottom-content-chart{
+
+}
+
+/* .drop-zone2 .submit-query{
+   
+    margin-top: 15vh;
+    margin-right: 10vh;
+
+} */
+
+.submit-query {
+    font-weight: bold;
+    border: 0px;
+    background: rgb(42,157,143);
+    background: linear-gradient(90deg, rgba(42,157,143,1) 0%, rgba(42,157,143,1) 51%, rgba(42,157,143,1) 98%);
+    width: 22vh;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 15px #aaaaaa; 
+    color: white;
+}
+.drop-zone2 > ul {
+    list-style: none;
+}
+.scroll-element {
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    grid-auto-rows: 2.5vh;
+    width:100%;
+    height: 120px;
+    overflow-y: scroll;
+    text-align: start;
+
+}
+.scroll-element1 {
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    grid-auto-rows: 2.5vh;
+    width:100%;
+    height: 120px;
+    text-align: start;
+
+}
+.scroll-element .handle-hidden{
+    width: 10vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.y-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 3.1vh;
+    grid-gap: 1em;
+    background-color: rgb(217, 217, 217);
+    margin: 2px;
+    padding: 0;
+    
+}
+.wrap-over-data{
+    width: 8vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.type-list-y > select{
+    border: 0px solid;
+    border-radius: 8px;
+}

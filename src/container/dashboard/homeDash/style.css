@@ -1,0 +1,42 @@
+.home-dash-content{
+    display: grid;
+    grid-template-columns: repeat(5,30vh);
+    grid-auto-rows: minmax(30vh,30vh);
+    grid-gap: 7vh ;
+   margin-left: 5vh;
+   margin-top: 5vh;
+}
+
+.list-dashboard{
+    background-color: white;
+    box-shadow: 1px 1px 5px#aaaaaa;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows:  60px  ;
+}
+
+.list-dashboard-zone1{
+    /* background-color: red; */
+
+}
+
+.list-dashboard-zone2{
+    /* background-color: green; */
+}
+
+.list-dashboard-zone3{
+    /* background-color: yellow; */
+    grid-column: 1/3;
+}
+.name-dashBoard{
+    text-align: start;
+    color:rgb(82,147,255);
+    text-align: start;
+    font-size: 2vh;
+    font-weight: bold;
+}
+.date-dashBoard{
+    text-align: start;
+    
+}

@@ -1,0 +1,12 @@
+.drag-data{
+    width:20vh;
+    height:50hh;
+    background-color: red;
+}
+
+.drop-data{
+    margin-top: 50vh;
+    width:20vh;
+    height:50hh;
+    background-color: red;
+}

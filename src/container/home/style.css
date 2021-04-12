@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(249,249,249);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.main-list-project{
+    display: grid;
+    grid-template-columns: repeat(5,30vh);
+    grid-auto-rows: minmax(30vh,30vh);
+    grid-gap: 7vh ;
+   margin-left: 5vh;
+   margin-top: 5vh;
+
+}
+
+
+.main-list-project  .list-project{
+    background-color: white;
+    box-shadow: 1px 1px 5px#aaaaaa;
+    cursor: pointer;
+
+  
+}
+.list-project .name-project {
+    text-align: start;
+    font-size: 2vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+.list-project .name-project .name{
+    color:rgb(82,147,255);
+}
+
+.list-project .date-project {
+
+    text-align: start;
+  
+}
+
+
+.animation-background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1250px){
+    .main-list-project{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .main-list-project{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+
+    }
+
+}
+
+@media only screen and (max-width: 980px){
+    .main-list-project{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+}
+@media only screen and (max-width: 550px){
+    .main-list-project{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+
+    }
+
+}
+

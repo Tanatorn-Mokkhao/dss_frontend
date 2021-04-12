@@ -1,0 +1,93 @@
+.main-dashboard {
+    display: grid;
+    grid-template-columns: 230px minmax(80vh,1fr); 
+    grid-template-rows: minmax(100vh ,100vh) 1fr;
+
+}
+
+.dash-drag{
+    background-color: white;
+    box-shadow: 0px 5px 15px #aaaaaa; 
+}
+
+
+
+.dash-drag > ul{
+ list-style: none;
+ text-align: start;
+ margin-top: 50px;
+}
+
+.dash-drag > ul >li{
+    padding:10px;
+}
+
+.dash-content {
+       display:grid;
+       grid-template-columns: repeat(2,50%);
+       grid-template-rows: 50%;
+}
+   
+.z1-notdrop{
+    border: 1px solid;
+}
+.z2-notdrop{
+    border: 1px solid;
+}
+   
+.z3-notdrop{
+    border: 1px solid;
+}
+.z4-notdrop{
+    border: 1px solid;
+}
+.z1-drop{
+    border: 1px solid;
+}
+.z2-drop{
+    border: 1px solid;
+}
+.z3-drop{
+    border: 1px solid;
+}
+.z4-drop{
+    border: 1px solid;
+}
+.z1-notdrop > ul{
+    list-style: none;
+    margin-top: 220px;
+   padding: 0;
+}
+.z1-notdrop > ul > li{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.z2-notdrop > ul{
+    list-style: none;
+    margin-top: 220px;
+   padding: 0;
+}
+.z2-notdrop > ul > li{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.z3-notdrop > ul{
+    list-style: none;
+    margin-top: 220px;
+   padding: 0;
+}
+.z3-notdrop > ul > li{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.z4-notdrop > ul{
+    list-style: none;
+    margin-top: 220px;
+   padding: 0;
+}
+.z4-notdrop > ul > li{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
