@@ -15,7 +15,7 @@ axiosInstance.interceptors.response.use(
     const { status } = error.response;
     if (status === 401) {
       localStorage.clear();
-      store.dispatch({ type: authType.LOGIN_SUCCESS });
+      store.dispatch({ type: authType.LOGOUT_SUCCESS });
     }
     return Promise.reject(error);
   }
