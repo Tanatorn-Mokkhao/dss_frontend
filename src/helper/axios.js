@@ -1,11 +1,16 @@
 import axios from "axios";
 import store from "../store/store";
 import { authType } from "../action/type";
+const baseURL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:2005/api"
+    : "https://dssbackend.herokuapp.com/api";
+
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:2005/api",
-  // baseURL: "https://dssbackend.herokuapp.com/api",
+  baseURL,
   withCredentials: true,
 });
+// baseURL: "https://dssbackend.herokuapp.com/api",
 
 axiosInstance.interceptors.response.use(
   (res) => {
