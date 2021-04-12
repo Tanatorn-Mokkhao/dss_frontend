@@ -9,6 +9,8 @@ const baseURL =
 export const axiosInstance = axios.create({
   baseURL: "http://localhost:2005/api",
   withCredentials: true,
+  "Access-Control-Allow-Credentials": "true",
+  crossorigin: true,
 });
 // baseURL: "https://dssbackend.herokuapp.com/api",
 
