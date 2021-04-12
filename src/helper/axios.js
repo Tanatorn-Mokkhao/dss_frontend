@@ -2,7 +2,8 @@ import axios from "axios";
 import store from "../store/store";
 import { authType } from "../action/type";
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:2005/api",
+  // baseURL: "http://localhost:2005/api",
+  baseURL: "https://dssbackend.herokuapp.com/api",
   withCredentials: true,
 });
 
