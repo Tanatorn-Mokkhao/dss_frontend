@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { signin } from "../../action/authAction";
+import { signup } from "../../action/authAction";
 import { Redirect } from "react-router-dom";
 import "./style.css";
 
-function Signin(props) {
+function Signup(props) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
+
   const handleLogin = () => {
-    const payload = { email, password };
-    dispatch(signin(payload));
+    const payload = { firstName, lastName, username, email, password };
+    dispatch(signup(payload));
   };
 
   if (auth.authenticate) {
@@ -20,13 +24,37 @@ function Signin(props) {
   }
 
   return (
-    <div className="main-signin-page">
-      <Container className="signin-field">
-        <div className="signin-left">
+    <div className="main-signup-page">
+      <Container className="signup-field">
+        <div className="signup-left">
           <div className="header-login">
-            <p>Login</p>
+            <p>Signup</p>
           </div>
           <div className="fill-zone">
+            <input
+              type="text"
+              placeholder="firstName"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            ></input>
+            <br />
+            <br />
+            <input
+              type="text"
+              placeholder="lasttName"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            ></input>
+            <br />
+            <br />
+            <input
+              type="text"
+              placeholder="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            ></input>
+            <br />
+            <br />
             <input
               type="email"
               placeholder="Email"
@@ -42,12 +70,7 @@ function Signin(props) {
               onChange={(e) => setPassword(e.target.value)}
             ></input>
             <br />
-            <button onClick={handleLogin}>LOG IN</button>
-            <br />
-            <br />
-            <a href="/signup" style={{ color: "black", fontWeight: "bold" }}>
-              Sign up
-            </a>
+            <button onClick={handleLogin}>Submit</button>
           </div>
           <br />
           <br />
@@ -55,7 +78,7 @@ function Signin(props) {
             <p style={{ fontWeight: "bold", color: "red" }}>{auth.error}</p>
           ) : null}
         </div>
-        <div className="signin-right">
+        <div className="signup-right">
           <div className="overlay"></div>
         </div>
       </Container>
@@ -63,4 +86,4 @@ function Signin(props) {
   );
 }
 
-export default Signin;
+export default Signup;

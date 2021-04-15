@@ -23,7 +23,23 @@ export const signin = (payload) => {
     }
   };
 };
-
+export const signup = (payload) => {
+  return async (dispatch) => {
+    try {
+      dispatch({ type: authType.SIGNUP_REQUEST });
+      const res = await axios.post("/user/signup", { payload });
+      if (res.status === 201) {
+        dispatch({ type: authType.SIGNUP_SUCCESS });
+        window.location.href = "/signin";
+      }
+    } catch (error) {
+      dispatch({
+        type: authType.SIGNUP_FAILURE,
+        payload: error.response.data,
+      });
+    }
+  };
+};
 export const isLogged = () => {
   return async (dispatch) => {
     const status = localStorage.getItem("status");

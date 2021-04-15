@@ -11,6 +11,7 @@ import Destinationlist from "./container/chart/destinationlist";
 import PrivateRoute from "../src/privateRoute/privateRoute";
 import HomeDash from "./container/dashboard/homeDash/homeDashBoard";
 import DashBoard from "./container/dashboard/dashboard";
+import Signup from "./container/signup/signup";
 function App() {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -33,6 +34,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/signin" component={Signin} />
+        <Route path="/signup" component={Signup} />
         <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/home/dashboard" component={HomeDash} />
         <PrivateRoute path="/importfile" component={Importexcel} />
