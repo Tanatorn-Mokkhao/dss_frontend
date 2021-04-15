@@ -253,7 +253,7 @@ function Sidebar(props) {
                     fontWeight: "bold",
                   }}
                 >
-                  Lie Chart
+                  Line Chart
                 </p>
               </li>
 
